@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Aggregator</title>
+</head>
+<body>
+    <h1>Latest Headlines from The Verge</h1>
+    <ul>
+        {% for title, link, date in headlines %}
+            <li>
+                <a href="{{ link }}" target="_blank">{{ title }}</a> - {{ date.strftime('%B %d, %Y') }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
